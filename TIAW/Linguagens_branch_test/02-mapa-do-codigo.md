@@ -78,9 +78,9 @@ Os caminhos são relativos à raiz do repositório. A lista abrange os arquivos 
 
 - **`src/public/assets/js/Willer/quiz.js`** — Apresenta perguntas, registra respostas e calcula o resultado do quiz. Funções declaradas identificadas: `carregarQuiz`, `mostrarPergunta`, `atualizarProgresso`, `conferirResposta`, `obterJogador`, `finalizarQuiz`.
 
-- **`src/public/assets/js/Willer/ranking.js`** — Cuida da apresentação do ranking do quiz.
+- **`src/public/assets/js/Willer/ranking.js`** — Arquivo vazio nesta versão; a apresentação dinâmica do ranking ainda precisa ser implementada.
 
-- **`src/public/assets/js/Willer/recompensas.js`** — Cuida da apresentação de recompensas do quiz.
+- **`src/public/assets/js/Willer/recompensas.js`** — Arquivo vazio nesta versão; a apresentação dinâmica das recompensas ainda precisa ser implementada.
 
 - **`src/public/assets/js/Willer/resultado.js`** — Consulta e apresenta um resultado do quiz. Funções declaradas identificadas: `mostrarErro`, `escolherMensagem`, `carregarResultado`.
 

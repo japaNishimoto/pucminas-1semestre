@@ -224,7 +224,7 @@ As mudanças nos documentos da disciplina, nos arquivos README e no `AGENTS.md` 
 
 O `AGENTS.md` registra restrições do projeto, como o uso de HTML, CSS e JavaScript e a orientação de não implementar backend diretamente. O projeto existente já possui um servidor de atendimento; essa restrição não deve ser confundida com uma afirmação de que não existe servidor no código atual.
 
-### 8.2. Commits locais atuais
+### 8.2. Commits registrados à época
 
 Os commits foram refeitos a pedido, para separar melhor os assuntos e deixar os nomes mais claros. Na data da conferência, os commits atuais eram:
 
@@ -270,7 +270,7 @@ O ajuste está ligado à estrutura `.video-moldura` usada atualmente na página 
 - `src/public/assets/css/acessibilidade.css`: impede que o `iframe` receba o ponteiro enquanto a linha está ativa.
 - `src/public/assets/js/acessibilidade.js`: controla a visibilidade do botão, desativa a linha ao usá-lo e atualiza a preferência.
 
-**Situação:** esses quatro arquivos estavam modificados e **ainda não tinham sido commitados** quando este guia foi escrito.
+**Situação histórica:** esses quatro arquivos estavam modificados quando o guia foi escrito. O ajuste foi depois registrado no commit `d31a731`, presente na branch `test` conferida.
 
 ## 10. O que foi verificado e o que ainda falta
 

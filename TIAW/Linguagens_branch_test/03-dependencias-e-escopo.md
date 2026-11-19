@@ -32,9 +32,7 @@ Os pacotes declarados devem ser conferidos em `package.json` e `src/package.json
 
 ## Situação no momento da análise
 
-Nesta análise, os arquivos de trabalho já modificados e ainda não commitados foram lidos como estão no disco. O servidor também apresenta uma alteração local pendente. Os arquivos locais de contas e mensagens foram excluídos por privacidade; seus conteúdos não foram copiados.
-
-Arquivos versionados com alteração local: `src/db/atendimento/conteudo.json`, `src/public/assets/css/atendimento/acesso.css`, `src/public/assets/css/atendimento/conta.css`, `src/public/assets/css/navegacao.css`, `src/public/assets/js/atendimento/acesso.js`, `src/public/assets/js/atendimento/cliente.js`, `src/public/assets/js/navegacao.js`, `src/public/modulos/Icaro/atendimento/conta.html`, `src/public/modulos/Icaro/atendimento/index.html`, `src/servidor-atendimento.js`.
+A conferência foi feita no commit `493d89b`, com a branch local alinhada a `origin/test` e sem alterações em arquivos rastreados. Os arquivos não rastreados da antiga pasta de dados de atendimento ficaram fora do inventário e não tiveram seu conteúdo reproduzido.
 
 ## O que esta análise cobre
 

@@ -4,7 +4,7 @@
 
 `src/public/assets/js/navegacao.js` monta a navegação comum. As páginas usam HTML para a estrutura; `navegacao.css` e `navegacao-local.css` definem a apresentação e o encaixe do cabeçalho. `acesso.js`, `conta.html` e `acesso.css` formam a tela de login e cadastro. `cliente.js` guarda e consulta a identificação usada pelo cliente na interface.
 
-As escolhas do navegador podem ser guardadas com `localStorage` ou `sessionStorage`. Isso não significa que todas as informações foram sincronizadas entre aparelhos. A existência de uma interface de edição também não garante que o servidor em execução ofereça a rota correspondente: a versão do servidor precisa ser compatível com a tela.
+As escolhas do navegador podem ser guardadas com `localStorage` ou `sessionStorage`. Isso não significa que todas as informações foram sincronizadas entre aparelhos. O perfil atual permite consultar nome e e-mail; a alteração desses dados não está disponível.
 
 ## Central de Ajuda e chat
 
@@ -22,4 +22,4 @@ O módulo `Willer` inclui telas e scripts de perguntas, quiz, resultado, ranking
 
 ## Servidor existente
 
-`src/servidor-atendimento.js` é JavaScript executado em Node.js, separado do JavaScript das páginas. Ele serve recursos e implementa rotas de atendimento e contas. `src/index.js` é um servidor de laboratório separado baseado em JSON Server. Há uma alteração local pendente no servidor desta cópia de `test`; os documentos indicam essa situação para distinguir o que está no commit daquilo que estava apenas no disco durante a leitura.
+`src/servidor-atendimento.js` é JavaScript executado em Node.js, separado do JavaScript das páginas. Ele serve recursos e implementa rotas de atendimento e contas. `src/index.js` é um servidor de laboratório separado baseado em JSON Server. Na conferência do commit `493d89b`, não havia alteração pendente nesse servidor.

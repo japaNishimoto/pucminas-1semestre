@@ -23,13 +23,13 @@ Na conversa mais antiga recuperada, o primeiro pedido foi melhorar o cabeçalho 
 
 O cadastro e a autenticação do cliente foram introduzidos em `0ce5940`, depois da criação da área da equipe. O mesmo commit registrou a separação do Painel do Atendente e notificações para conversas sem resposta.
 
-1. O cliente abre **Minha conta** pelo menu do site ou **Entrar** na Central de Ajuda. A janela oferece **Já tenho conta** e **Criar conta**.
+1. O cliente seleciona **Entrar** no cabeçalho para acessar a página de conta. Ela oferece login e cadastro; a Central também contém uma janela de conta.
 2. No cadastro, informa nome, e-mail, senha e confirmação da senha. Há opções para mostrar a senha enquanto digita. O formulário verifica os campos e exibe os erros na própria janela.
 3. O servidor verifica nome de 2 a 60 caracteres, e-mail válido de até 100 caracteres e senha de 6 a 64 caracteres. O e-mail é normalizado para minúsculas e precisa ser único. A confirmação de senha é verificada na interface.
 4. Se o cadastro for aceito, a conta é criada e o cliente já entra. Para retornar, basta usar o e-mail e a senha. A navegação da Central passa a mostrar uma saudação com o primeiro nome e a opção **Sair**.
 5. O navegador guarda o token e o perfil em `localStorage`, na chave `ajudooce-cliente`. A página consulta a sessão no servidor ao abrir. Se a sessão estiver inválida, volta à interface de visitante. O servidor guarda o hash da senha com salt, e a sessão ativa fica em memória com validade de até sete dias. Reiniciar o servidor exige novo login.
 
-O cadastro cria uma conta de cliente. O formulário com habilidades e disponibilidade previsto para voluntários é outro fluxo e ainda não está integrado. O fluxo disponível usa e-mail e senha. Entrada com Google ou Apple, confirmação por e-mail e recuperação de senha de cliente não aparecem nas rotas implementadas. A tela avulsa `src/public/modulos/Gustavo/login.html` é um esboço separado. Ela referencia um script ausente no checkout. O cadastro funcional é o da Central.
+O perfil atual exibe nome e e-mail para consulta; não há edição desses dados nessa interface nem rota de alteração de conta do cliente nesta versão. O cadastro cria uma conta de cliente. O formulário com habilidades e disponibilidade previsto para voluntários é outro fluxo e ainda não está integrado. O fluxo disponível usa e-mail e senha. Entrada com Google ou Apple, confirmação por e-mail e recuperação de senha de cliente não aparecem nas rotas implementadas. A tela avulsa `src/public/modulos/Gustavo/login.html` é um esboço separado. Ela referencia um script ausente no checkout. O cadastro funcional é o da Central.
 
 | Código atual | Função |
 | --- | --- |
@@ -42,7 +42,7 @@ O cadastro cria uma conta de cliente. O formulário com habilidades e disponibil
 
 O primeiro fluxo de chat com resposta automática está em `f34cba3`. O fechamento pelo **X**, por clique no fundo e a liberação da rolagem aparecem em `ac801c1`. A configuração atual está voltada à **resposta humana**. O código de resposta por perguntas frequentes permanece no arquivo com a opção automática desligada.
 
-- **Visitante.** O chat cria e guarda um identificador naquele navegador. O atendente vê a conversa identificada como visitante.
+- **Visitante.** A janela de chat pode ser aberta sem conta, mas a navegação compartilhada solicita login antes do envio de mensagens. O código ainda possui suporte a identificadores de visitante, o que não altera essa exigência da interface atual.
 - **Cliente autenticado.** O chat usa o ID da conta e mostra o nome do cliente à equipe. A mesma conta pode acessar a conversa em outro navegador conectado à mesma instalação. O histórico de visitante fica separado.
 - **Troca de mensagens.** O cliente pode enviar mensagens de até 500 caracteres. A janela consulta novas mensagens a cada três segundos enquanto aberta. O painel da equipe também faz consultas periódicas.
 - **Notificações.** A tela e o menu da equipe consultam o resumo de pendências. Uma conversa conta como pendente quando há mensagem do cliente posterior à última resposta da equipe. Há indicador junto ao atendimento e a contagem também pode aparecer no título da aba do painel.
@@ -60,7 +60,7 @@ O commit `7986090` registrou a área da equipe com tela inicial, perfis e acesso
 | Administrador | Os módulos do atendente e gerenciamento das perguntas do quiz. |
 | Master | Os módulos do administrador e gerenciamento das contas da equipe. |
 
-O master pode consultar e cadastrar usuários da equipe, mudar perfil e nome, redefinir senhas e excluir contas. O nome de usuário deve ter de 3 a 30 caracteres. As senhas de cadastro ou redefinição aceitam de 6 a 64 caracteres. As contas criadas pelo painel recebem o perfil de atendente ou administrador. A conta master tem proteção própria. Redefinir a senha ou excluir uma conta encerra as sessões existentes dessa conta.
+O master pode consultar e cadastrar usuários da equipe, mudar perfis, redefinir senhas e excluir contas. O código atual não oferece alteração do nome de usuários existentes. O nome de usuário deve ter de 3 a 30 caracteres. As senhas de cadastro ou redefinição aceitam de 6 a 64 caracteres. As contas criadas pelo painel recebem o perfil de atendente ou administrador. A conta master tem proteção própria. Redefinir a senha ou excluir uma conta encerra as sessões existentes dessa conta.
 
 | Código atual | Função |
 | --- | --- |

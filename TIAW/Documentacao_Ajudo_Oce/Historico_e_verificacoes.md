@@ -68,7 +68,7 @@ O relato final daquela etapa registra testes no Microsoft Edge de controles, tec
 3. **Tema escuro.** Criamos a opção e a preferência persistente. O botão passou a mostrar a ação seguinte. Harmonizamos azuis, ícones, contornos e fundos, tratamos a logo para exibir letras claras e corrigimos as faixas ao redor da Central. A ilustração do banner foi ocultada numa revisão intermediária e voltou após o pedido para manter a pessoa. Excluímos o contêiner dos botões da regra que pintava fundos quadrados e reforçamos os cantos arredondados.
 4. **Alto contraste.** Trocamos a lista por um botão cujo texto muda para **Contraste padrão** quando ativo. Depois ajustamos fundos, ícones, bordas, logo e controles em preto, branco e amarelo. A imagem do banner foi preservada.
 5. **Commits.** As mudanças pendentes foram registradas localmente. Depois do pedido de títulos mais específicos, a sequência foi refeita em quatro commits, preservando o conteúdo versionado. A retirada da mídia de testes ficou junto das mudanças de documentação.
-6. **Linha de leitura e YouTube.** A linha passou a ter um modo para atravessar a área do vídeo da página inicial. Enquanto a linha estiver ligada, aparece um botão para desligá-la e usar o vídeo. Esse ajuste ainda está nos arquivos locais.
+6. **Linha de leitura e YouTube.** A linha passou a ter um modo para atravessar a área do vídeo da página inicial. Enquanto a linha estiver ligada, aparece um botão para desligá-la e usar o vídeo. Esse ajuste foi posteriormente registrado no commit `d31a731`, presente na branch `test` conferida.
 7. **Documentação externa.** O primeiro guia aprofundava a conversa mais recente. Esta revisão acrescenta o histórico disponível, os fluxos anteriores e o inventário do projeto na mesma pasta `TIAW/Documentacao_Ajudo_Oce/`.
 
 Os detalhes dessas mudanças, arquivos e instruções para uso estão no capítulo de interface. [Acessibilidade e interface](Acessibilidade_e_interface.md)
@@ -95,7 +95,7 @@ Os detalhes dessas mudanças, arquivos e instruções para uso estão no capítu
 
 Na conversa mais recente, houve conferências de sintaxe e de formatação do diff, além de capturas da Central em desktop com tema escuro e alto contraste. A tentativa de validar a interação da linha com o vídeo não concluiu. A captura móvel mais recente também não permitiu conferir a largura com precisão. O relato dos testes iniciais de 320 px e o teste histórico de 390 px são de versões anteriores.
 
-## Commits da sequência atual
+## Commits da sequência registrada à época
 
 | Commit | Mensagem |
 | --- | --- |
@@ -104,4 +104,4 @@ Na conversa mais recente, houve conferências de sintaxe e de formatação do di
 | `b9e654f` | Evita corte de texto nas opções da triagem |
 | `92803d5` | Alteração na documentação do projeto |
 
-A primeira sequência de seis commits foi substituída pela sequência acima. A verificação feita na ocasião confirmou que os arquivos versionados ao final continuaram com o mesmo conteúdo. Esses commits ficaram locais na branch `test`. O ajuste do YouTube e os arquivos de dados da estrutura antiga ficaram fora dos commits.
+A primeira sequência de seis commits foi substituída pela sequência acima. A verificação feita na ocasião confirmou que os arquivos versionados ao final continuaram com o mesmo conteúdo. Naquela ocasião, esses commits eram locais. Na conferência atual, a branch `test` está em `493d89b` e alinhada a `origin/test`; o ajuste do YouTube consta em `d31a731`. Os arquivos da pasta antiga de dados continuam não rastreados.
